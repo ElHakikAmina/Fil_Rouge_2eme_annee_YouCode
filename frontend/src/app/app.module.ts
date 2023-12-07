@@ -8,6 +8,8 @@ import { SignupComponent } from './signup/signup.component';
 import { ProductComponent } from './product/product.component';
 import { SearchComponent } from './search/search.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { AppLayoutComponent } from './app-layout/app-layout.component';
+import { CarouselHomeComponent } from './components/carousel-home/carousel-home.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     SignupComponent,
     ProductComponent,
     SearchComponent,
-    NavbarComponent
+    NavbarComponent,
+    AppLayoutComponent,
+    CarouselHomeComponent
   ],
   imports: [
     BrowserModule,
