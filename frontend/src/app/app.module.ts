@@ -11,6 +11,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppLayoutComponent } from './app-layout/app-layout.component';
 import { CarouselHomeComponent } from './components/carousel-home/carousel-home.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ContactusComponent } from './contactus/contactus.component';
     NavbarComponent,
     AppLayoutComponent,
     CarouselHomeComponent,
-    ContactusComponent
+    ContactusComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
