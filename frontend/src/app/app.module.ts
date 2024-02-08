@@ -10,6 +10,7 @@ import { SearchComponent } from './search/search.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppLayoutComponent } from './app-layout/app-layout.component';
 import { CarouselHomeComponent } from './components/carousel-home/carousel-home.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CarouselHomeComponent } from './components/carousel-home/carousel-home.
     SearchComponent,
     NavbarComponent,
     AppLayoutComponent,
-    CarouselHomeComponent
+    CarouselHomeComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
