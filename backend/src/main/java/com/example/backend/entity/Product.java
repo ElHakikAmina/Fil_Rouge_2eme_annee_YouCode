@@ -1,4 +1,4 @@
 package com.example.backend.entity;
 
-public class test {
+public class Product {
 }
