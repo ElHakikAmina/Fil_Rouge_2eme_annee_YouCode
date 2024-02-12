@@ -1,4 +1,4 @@
 package com.example.backend.dto;
 
-public class test {
+public class ReviewDTO {
 }
