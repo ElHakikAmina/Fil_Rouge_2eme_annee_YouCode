@@ -1,11 +1,13 @@
 package com.youcode.MonSupplier.models.Entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
+@Table(name = "product")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,6 +17,10 @@ public class Product {
     private int less_quantity;
     private int quantity;
     private String description;
-    id_category ;
-        id_supplier;
+
+    @ManyToOne
+    private Supplier supplier;
+
+    @ManyToOne
+    private Category category;
 }

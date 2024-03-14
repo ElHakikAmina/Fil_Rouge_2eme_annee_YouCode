@@ -1,17 +1,18 @@
 package com.youcode.MonSupplier.services.interfaces;
 
-import com.youcode.MonSupplier.models.Dtos.UserDto.UserDto;
-import com.youcode.MonSupplier.models.Dtos.ValidationDto.ValidationDto;
+import com.youcode.MonSupplier.models.Dtos.CategoryDto.CategoryDto;
+import com.youcode.MonSupplier.models.Entities.Category;
 
+import java.util.List;
 import java.util.Optional;
 
-public interface UserService {
-    Optional Login (UserDto userDto);
-    Boolean activateAccount (ValidationDto validationDto);
+public interface CategoryService {
+    List<Category> getCategories();
 
-    Boolean sendCodeForgetPassword(UserDto userDto);
+    Category CreateCategory(CategoryDto CategorieDto);
+    Optional<Category> ReadCategoryById(Long id);
 
-    Boolean updatePassword(ValidationDto validationDto, String newPassword);
+    Category UpdateCategory(CategoryDto CategorieDto);
 
-    Boolean signUp(Object userObject);
+    Boolean DeleteCategory(Long id);
 }
