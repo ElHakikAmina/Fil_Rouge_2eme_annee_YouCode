@@ -18,4 +18,6 @@ public interface ProductService {
     Product updateProduct(ProductDto ProductDto);
     
     Boolean deleteProduct(Long id);
+
+    Boolean achatProduct(long idBuyer, long idProduct, int quantity);
 }

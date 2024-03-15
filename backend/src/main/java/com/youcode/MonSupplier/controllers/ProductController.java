@@ -42,4 +42,9 @@ public class ProductController {
     public boolean deleteProduct(@PathVariable Long id){
         return productService.deleteProduct(id);
     }
+
+    @PostMapping("/achatProduct/{idBuyer}/{idProduct}/{quantity}")
+    public boolean achatProduct(@PathVariable Long idBuyer, @PathVariable Long idProduct, @PathVariable int quantity){
+        return productService.achatProduct(idBuyer, idProduct, quantity);
+    }
 }
