@@ -81,14 +81,4 @@ public class ProductServiceImpl implements ProductService {
         }
         return false;
     }
-
-    @Override
-    public List<Product> searchByPrice(float price) {
-        return productRepository.findAllByPrix(price);
-    }
-
-    @Override
-    public List<Product> searchByNameOrDescription(String search) {
-        return productRepository.findAllByNameOrDescription(search,search);
-    }
 }

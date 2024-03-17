@@ -20,8 +20,4 @@ public interface ProductService {
     Boolean deleteProduct(Long id);
 
     Boolean achatProduct(long idBuyer, long idProduct, int quantity);
-
-    List<Product> searchByPrice(float price);
-
-    List<Product> searchByNameOrDescription(String search);
 }

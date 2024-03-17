@@ -1,13 +1,10 @@
 package com.youcode.MonSupplier.controllers;
 
 import com.youcode.MonSupplier.models.Dtos.ProductDto.ProductDto;
-import com.youcode.MonSupplier.models.Entities.Product;
 import com.youcode.MonSupplier.services.interfaces.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @Controller
@@ -24,16 +21,6 @@ public class ProductController {
     @GetMapping("/getAllProducts")
     public Object getAllProducts(){
         return productService.getProducts();
-    }
-
-    @GetMapping("/searchByPrice/{price}")
-    public List<Product> searchByPrice(@PathVariable float price){
-        return productService.searchByPrice(price);
-    }
-
-    @GetMapping("/searchByNameOrDescription/{search}")
-    public List<Product> searchByPrice(@PathVariable String search){
-        return productService.searchByNameOrDescription(search);
     }
 
     @GetMapping("/getProduct/{id}")

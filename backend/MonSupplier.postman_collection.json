@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "3e920c06-94fe-4986-aebe-1dd809ec6c72",
+		"name": "MonSupplier",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21091777"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "search by price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/Product/searchByPrice/:price",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Product",
+								"searchByPrice",
+								":price"
+							],
+							"variable": [
+								{
+									"key": "price",
+									"value": "111",
+									"description": "Float"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search by Name or Description",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/Product/searchByNameOrDescription/:search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Product",
+								"searchByNameOrDescription",
+								":search"
+							],
+							"variable": [
+								{
+									"key": "search",
+									"value": "name",
+									"description": "String"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
