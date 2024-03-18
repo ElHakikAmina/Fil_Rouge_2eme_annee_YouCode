@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface CommentService {
-    List<Comment> getCategories();
+    List<Comment> getComments();
 
     Comment CreateComment(CommentDto commentDto);
     Optional<Comment> ReadCommentById(Long id);

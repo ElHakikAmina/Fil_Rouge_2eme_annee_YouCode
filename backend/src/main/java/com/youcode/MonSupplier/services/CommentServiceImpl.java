@@ -21,13 +21,13 @@ public class CommentServiceImpl implements CommentService {
         this.modelMapper = modelMapper;
     }
     @Override
-    public List<Comment> getCategories() {
+    public List<Comment> getComments() {
         return commentRepository.findAll();
     }
 
     @Override
-    public Comment CreateComment(CommentDto CategorieDto) {
-        Comment comment = modelMapper.map(CategorieDto,Comment.class);
+    public Comment CreateComment(CommentDto commentDto) {
+        Comment comment = modelMapper.map(commentDto,Comment.class);
         commentRepository.save(comment);
         return comment;
     }
