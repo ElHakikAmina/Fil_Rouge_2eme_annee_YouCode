@@ -1,3 +1,4 @@
+import { RoleUser } from './role-user.enum';
 
 export interface Supplier {
     id: number;
