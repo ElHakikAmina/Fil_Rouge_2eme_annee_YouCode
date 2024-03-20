@@ -1,6 +1,7 @@
 import { Supplier } from "./supplier";
 import { Category } from "./category";
 export interface Product {
+image: any;
     id: number;
     name: string;
     prix: number;

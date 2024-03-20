@@ -14,6 +14,7 @@ public class ProductDto {
     private int less_quantity;
     private int quantity;
     private String description;
+    private String image;
     private Category category;
     private Supplier supplier;
 }

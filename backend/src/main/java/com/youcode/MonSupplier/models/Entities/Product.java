@@ -17,6 +17,7 @@ public class Product {
     private int less_quantity;
     private int quantity;
     private String description;
+    private String image;
 
     @ManyToOne
     private Supplier supplier;

@@ -12,4 +12,5 @@ public class ProductResponseDto {
     private int less_quantity;
     private int quantity;
     private String description;
+    private String image;
 }
