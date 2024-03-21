@@ -15,6 +15,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
+import { CreateproductComponent } from './pages/createproduct/createproduct.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FooterComponent } from './components/footer/footer.component';
     CarouselHomeComponent,
     ContactusComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    CreateproductComponent
   ],
   imports: [
     BrowserModule,
