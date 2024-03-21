@@ -8,6 +8,9 @@ import { SearchComponent } from './pages/search/search.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { CreateproductComponent } from './pages/createproduct/createproduct.component';
 import { CreatecategoryComponent } from './pages/createcategory/createcategory.component';
+import { DashboardadminComponent } from './pages/dashboardadmin/dashboardadmin.component';
+import { DashboardsupplierComponent } from './pages/dashboardsupplier/dashboardsupplier.component';
+import { DashboardbuyerComponent } from './pages/dashboardbuyer/dashboardbuyer.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -17,7 +20,10 @@ const routes: Routes = [
   {path: 'search' , component:SearchComponent},
   {path: 'signup' , component:SignupComponent},
   {path: 'createproduct' , component:CreateproductComponent},
-  {path: 'createcategory' , component:CreatecategoryComponent}
+  {path: 'createcategory' , component:CreatecategoryComponent},
+  {path:'dashboardadmin' , component:DashboardadminComponent},
+  {path: 'dashboardsupplier' , component:DashboardsupplierComponent},
+  {path: 'dashboardbuyer', component:DashboardbuyerComponent}
 ];
 
 @NgModule({

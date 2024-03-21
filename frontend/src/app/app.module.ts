@@ -19,6 +19,9 @@ import { CreateproductComponent } from './pages/createproduct/createproduct.comp
 import { CreatecategoryComponent } from './pages/createcategory/createcategory.component';
 import { CreatecommentComponent } from './components/createcomment/createcomment.component';
 import { ShowcommentsComponent } from './components/showcomments/showcomments.component';
+import { DashboardadminComponent } from './pages/dashboardadmin/dashboardadmin.component';
+import { DashboardsupplierComponent } from './pages/dashboardsupplier/dashboardsupplier.component';
+import { DashboardbuyerComponent } from './pages/dashboardbuyer/dashboardbuyer.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { ShowcommentsComponent } from './components/showcomments/showcomments.co
     CreateproductComponent,
     CreatecategoryComponent,
     CreatecommentComponent,
-    ShowcommentsComponent
+    ShowcommentsComponent,
+    DashboardadminComponent,
+    DashboardsupplierComponent,
+    DashboardbuyerComponent
   ],
   imports: [
     BrowserModule,
