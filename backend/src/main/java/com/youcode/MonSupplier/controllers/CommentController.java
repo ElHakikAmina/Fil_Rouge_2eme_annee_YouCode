@@ -18,9 +18,9 @@ public class CommentController {
         this.commentService = commentService;
     }
 
-    @GetMapping("/getAllComments")
-    public Object getAllComments(){
-        return commentService.getComments();
+    @GetMapping("/getAllComments/{idProduct}")
+    public Object getAllComments(@PathVariable Long idProduct){
+        return commentService.getComments(idProduct);
     }
     @GetMapping("/getComment/{id}")
     public Object getComment(@PathVariable Long id){

@@ -12,8 +12,8 @@ export class CommentService {
 
   constructor(private http: HttpClient) { }
 
-  getAllComments(): Observable<Comment[]> {
-    return this.http.get<Comment[]>(`${this.baseUrl}/getAllComments`);
+  getAllComments(idProduct:number): Observable<Comment[]> {
+    return this.http.get<Comment[]>(`${this.baseUrl}/getAllComments/${idProduct}`);
   }
 
   getComment(id: number): Observable<Comment> {

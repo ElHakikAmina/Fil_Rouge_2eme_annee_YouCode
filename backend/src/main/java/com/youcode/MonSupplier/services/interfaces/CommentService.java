@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface CommentService {
-    List<Comment> getComments();
+    List<Comment> getComments(Long idProduct);
 
     Comment CreateComment(CommentDto commentDto);
     Optional<Comment> ReadCommentById(Long id);

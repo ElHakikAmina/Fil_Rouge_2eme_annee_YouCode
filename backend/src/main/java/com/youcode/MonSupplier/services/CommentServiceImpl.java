@@ -21,8 +21,8 @@ public class CommentServiceImpl implements CommentService {
         this.modelMapper = modelMapper;
     }
     @Override
-    public List<Comment> getComments() {
-        return commentRepository.findAll();
+    public List<Comment> getComments(Long idProduct) {
+        return commentRepository.findAllByProduct_Id(idProduct);
     }
 
     @Override

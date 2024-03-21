@@ -4,8 +4,8 @@ export interface Buyer {
     id: number;
     email: string;
     password: string;
-    Nom: string;
-    Prenom: string;
+    nom: string;
+    prenom: string;
     roleUser: RoleUser;
     isVerifie: boolean;
 }

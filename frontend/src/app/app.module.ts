@@ -18,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CreateproductComponent } from './pages/createproduct/createproduct.component';
 import { CreatecategoryComponent } from './pages/createcategory/createcategory.component';
 import { CreatecommentComponent } from './components/createcomment/createcomment.component';
+import { ShowcommentsComponent } from './components/showcomments/showcomments.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CreatecommentComponent } from './components/createcomment/createcomment
     FooterComponent,
     CreateproductComponent,
     CreatecategoryComponent,
-    CreatecommentComponent
+    CreatecommentComponent,
+    ShowcommentsComponent
   ],
   imports: [
     BrowserModule,
