@@ -23,12 +23,12 @@ saveProduct(product: any) {
   );
 }
   product = {
-    name:String,
-    prix: Number,
-    less_quantity: Number,
-    quantity: Number,
-    description: String,
-    image: String
+    name : '',
+    prix: '',
+    less_quantity: '',
+    quantity: '',
+    description: '',
+    image: ''
   }
   constructor(private fb: FormBuilder, private productService: ProductService) {
     

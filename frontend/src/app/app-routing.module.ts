@@ -7,6 +7,7 @@ import { ContactusComponent } from './pages/contactus/contactus.component';
 import { SearchComponent } from './pages/search/search.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { CreateproductComponent } from './pages/createproduct/createproduct.component';
+import { CreatecategoryComponent } from './pages/createcategory/createcategory.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'contactus' , component:ContactusComponent},
   {path: 'search' , component:SearchComponent},
   {path: 'signup' , component:SignupComponent},
-  {path: 'createproduct' , component:CreateproductComponent}
+  {path: 'createproduct' , component:CreateproductComponent},
+  {path: 'createcategory' , component:CreatecategoryComponent}
 ];
 
 @NgModule({

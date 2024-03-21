@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 import { CreateproductComponent } from './pages/createproduct/createproduct.component';
+import { CreatecategoryComponent } from './pages/createcategory/createcategory.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CreateproductComponent } from './pages/createproduct/createproduct.comp
     ContactusComponent,
     HomeComponent,
     FooterComponent,
-    CreateproductComponent
+    CreateproductComponent,
+    CreatecategoryComponent
   ],
   imports: [
     BrowserModule,
