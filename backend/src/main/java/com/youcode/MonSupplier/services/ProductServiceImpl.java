@@ -2,9 +2,11 @@ package com.youcode.MonSupplier.services;
 
 import com.youcode.MonSupplier.models.Dtos.ProductDto.ProductDto;
 import com.youcode.MonSupplier.models.Entities.AchatProduct;
+import com.youcode.MonSupplier.models.Entities.Panier;
 import com.youcode.MonSupplier.models.Entities.Buyer;
 import com.youcode.MonSupplier.models.Entities.Product;
 import com.youcode.MonSupplier.repositories.AchatProductRepository;
+import com.youcode.MonSupplier.repositories.PanierRepository;
 import com.youcode.MonSupplier.repositories.BuyerRepository;
 import com.youcode.MonSupplier.repositories.ProductRepository;
 import com.youcode.MonSupplier.services.interfaces.ProductService;
@@ -19,12 +21,14 @@ public class ProductServiceImpl implements ProductService {
 
     private final ProductRepository productRepository;
     private final AchatProductRepository achatProductRepository;
+    private final PanierRepository panierRepository;
     private final BuyerRepository buyerRepository;
     private final ModelMapper modelMapper;
 
-    public ProductServiceImpl(ProductRepository productRepository, AchatProductRepository achatProductRepository, BuyerRepository buyerRepository, ModelMapper modelMapper) {
+    public ProductServiceImpl(ProductRepository productRepository,PanierRepository panierRepository, AchatProductRepository achatProductRepository, BuyerRepository buyerRepository, ModelMapper modelMapper) {
         this.productRepository = productRepository;
         this.achatProductRepository = achatProductRepository;
+        this.panierRepository = panierRepository;
         this.buyerRepository = buyerRepository;
         this.modelMapper = modelMapper;
     }
@@ -75,6 +79,27 @@ public class ProductServiceImpl implements ProductService {
                     achatProduct.setProduct(product.get());
                     achatProduct.setQuantity(quantity);
                     achatProductRepository.save(achatProduct);
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public Boolean ajouterAuPanier(long idBuyer, long idProduct, int quantity) {
+        if (productRepository.existsById(idProduct) && buyerRepository.existsById(idBuyer)){
+            Optional<Product> product = productRepository.findById(idProduct);
+            Buyer buyer = buyerRepository.findById(idBuyer).get();
+            if (product.isPresent()){
+                if (product.get().getQuantity() >= quantity && quantity >= product.get().getLess_quantity()){
+                    product.get().setQuantity(product.get().getQuantity() - quantity);
+                    productRepository.save(product.get());
+                    Panier panier = new Panier();
+                    panier.setBuyer(buyer);
+                    panier.setProduct(product.get());
+                    panier.setQuantity(quantity);
+                    panierRepository.save(panier);
                     return true;
                 }
             }

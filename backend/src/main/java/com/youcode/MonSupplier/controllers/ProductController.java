@@ -60,4 +60,9 @@ public class ProductController {
     public boolean achatProduct(@PathVariable Long idBuyer, @PathVariable Long idProduct, @PathVariable int quantity){
         return productService.achatProduct(idBuyer, idProduct, quantity);
     }
+
+    @PostMapping("/ajouteraupanier/{idBuyer}/{idProduct}/{quantity}")
+    public boolean ajouterAuPanier(@PathVariable Long idBuyer, @PathVariable Long idProduct, @PathVariable int quantity){
+        return productService.ajouterAuPanier(idBuyer, idProduct, quantity);
+    }
 }
