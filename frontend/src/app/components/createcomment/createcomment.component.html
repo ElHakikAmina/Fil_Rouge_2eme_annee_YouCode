@@ -1,0 +1,9 @@
+<p>createcomment works!</p>
+<form>
+    <div>
+      <label>Comment:</label>
+      <input [(ngModel)] = "comment.comment" name="comment" type="text">
+    </div>
+    
+    <button type="submit" (click)="saveComment(comment)">Create Comment</button>
+</form> 
