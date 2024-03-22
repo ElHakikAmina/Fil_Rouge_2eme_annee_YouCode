@@ -79,4 +79,26 @@ loadProducts():void{
 
 
 
+
+
+deleteProduct(productId: number): void {
+  this.productService.deleteProduct(productId).subscribe(
+    (result) => {
+      if (result) {
+        // Product successfully deleted
+        // Refresh the product list
+        this.loadProducts();
+      } else {
+        // Failed to delete product
+        // Handle error, e.g., display an error message to the user
+      }
+    },
+    (error) => {
+      console.error('Error deleting product:', error);
+      // Handle error, e.g., display an error message to the user
+    }
+  );
+}
+
+
 }
