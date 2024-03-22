@@ -101,4 +101,54 @@ deleteProduct(productId: number): void {
 }
 
 
+deleteCategory(categoryId: number): void {
+  this.categoryService.deleteCategory(categoryId).subscribe(
+    (result) => {
+      if (result) {
+        // Category successfully deleted
+        // Refresh the category list
+        this.loadCategories();
+      } else {
+        // Failed to delete category
+        // Handle error, e.g., display an error message to the user
+      }
+    },
+    (error) => {
+      console.error('Error deleting category:', error);
+      // Handle error, e.g., display an error message to the user
+    }
+  );
+}
+
+
+
+
+deleteSupplier(supplierId: number): void {
+  this.adminService.deleteById("Supplier",supplierId).subscribe(
+    () => {
+      // Remove the deleted supplier from the list
+      this.suppliers = this.suppliers.filter(supplier => supplier.id !== supplierId);
+    },
+    (error) => {
+      console.error('Error deleting supplier:', error);
+    }
+  );
+}
+
+deleteBuyer(buyerId: number): void {
+  this.adminService.deleteById("Buyer",buyerId).subscribe(
+    () => {
+      // Remove the deleted buyer from the list
+      this.buyers = this.buyers.filter(buyer => buyer.id !== buyerId);
+    },
+    (error) => {
+      console.error('Error deleting buyer:', error);
+    }
+  );
+}
+
+
+
+
+
 }

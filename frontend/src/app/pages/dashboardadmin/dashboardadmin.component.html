@@ -2,7 +2,9 @@
 <div>
     <h2>List of Suppliers</h2>
     <ul>
-      <li *ngFor="let supplier of suppliers">{{ supplier.nom }} - {{ supplier.email }}</li>
+      <li *ngFor="let supplier of suppliers">
+        {{ supplier.nom }} - {{ supplier.email }} <button (click)="deleteSupplier(supplier.id)">Delete</button>
+    </li>
     </ul>
 </div>
 
@@ -14,6 +16,7 @@
 <ul>
   <li *ngFor="let buyer of buyers">
     {{ buyer.name }} - {{ buyer.email }}
+    <button (click)="deleteBuyer(buyer.id)">Delete</button>
   </li>
 </ul>
 
@@ -21,8 +24,11 @@
 
 <h2>Categories</h2>
 <ul>
-  <li *ngFor="let category of categories">{{ category.name }}</li>
+  <li *ngFor="let category of categories">{{ category.name }} <button (click)="deleteCategory(category.id)">Delete</button></li>
 </ul>
+
+    
+  
 
 
 
@@ -36,6 +42,7 @@
       <th>Name</th>
       <th>Price</th>
       <th>Description</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
