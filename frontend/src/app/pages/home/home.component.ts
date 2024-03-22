@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/Services/Product/product.service';
 import { Product } from 'src/app/models/product';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -9,7 +11,8 @@ import { Product } from 'src/app/models/product';
 })
 export class HomeComponent implements OnInit{
   products:Array<Product> = []
-  constructor (private productService:ProductService){}
+  searchQuery: string = '';
+  constructor (private router: Router, private productService:ProductService){}
   ngOnInit(): void {
       this.getAllProducts()
   }
@@ -25,5 +28,39 @@ export class HomeComponent implements OnInit{
         }
       });
   }
+
+
+
+
+  searchProducts(): void {
+    if (this.searchQuery.trim() !== '') {
+      // Navigate to the search page with the search query as a parameter
+      this.router.navigate(['/search'], { queryParams: { q: this.searchQuery } });
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
