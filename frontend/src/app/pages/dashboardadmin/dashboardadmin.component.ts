@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../../Services/Admin/admin.service';
 import { CategoryService } from '../../Services/Category/category.service';
 import { Category } from 'src/app/models/category';
+import {Product} from 'src/app/models/product';
+import { ProductService } from 'src/app/Services/Product/product.service';
 
 @Component({
   selector: 'app-dashboardadmin',
@@ -13,13 +15,15 @@ export class DashboardAdminComponent implements OnInit {
   suppliers: any[] = [];
   buyers: any[] =[];
   categories: Category[] = [];
+  products: Product[]=[];
 
-  constructor(private adminService: AdminService, private categoryService: CategoryService) { }
+  constructor(private productService: ProductService ,private adminService: AdminService, private categoryService: CategoryService) { }
 
   ngOnInit(): void {
     this.loadSuppliers();
     this.loadBuyers();
     this.loadCategories();
+    this.loadProducts();
   }
 
   loadSuppliers(): void {
@@ -61,6 +65,17 @@ export class DashboardAdminComponent implements OnInit {
       }
     );
   }
+
+loadProducts():void{
+  this.productService.getAllProducts().subscribe(
+    (data) => {
+      this.products =data;
+    },
+    (error) => {
+      console.error('Error fetching products:', error);
+    }
+  );
+}
 
 
 

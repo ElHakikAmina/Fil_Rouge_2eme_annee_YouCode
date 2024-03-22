@@ -23,3 +23,27 @@
 <ul>
   <li *ngFor="let category of categories">{{ category.name }}</li>
 </ul>
+
+
+
+
+
+<h2>Products</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.id }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.prix }}</td>
+      <td>{{ product.description }}</td>
+    </tr>
+  </tbody>
+</table>
