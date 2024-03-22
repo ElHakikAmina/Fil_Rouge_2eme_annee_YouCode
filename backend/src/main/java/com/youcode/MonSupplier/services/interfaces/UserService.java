@@ -2,6 +2,7 @@ package com.youcode.MonSupplier.services.interfaces;
 
 import com.youcode.MonSupplier.models.Dtos.UserDto.UserDto;
 import com.youcode.MonSupplier.models.Dtos.ValidationDto.ValidationDto;
+import com.youcode.MonSupplier.models.Enums.RoleUser;
 
 import java.util.Optional;
 
@@ -13,5 +14,5 @@ public interface UserService {
 
     Boolean updatePassword(ValidationDto validationDto, String newPassword);
 
-    Boolean signUp(Object userObject);
+    Boolean signUp(Object userObject, RoleUser roleUser);
 }

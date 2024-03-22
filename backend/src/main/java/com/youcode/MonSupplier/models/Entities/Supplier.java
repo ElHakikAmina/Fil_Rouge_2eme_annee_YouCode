@@ -16,6 +16,7 @@ public class Supplier {
     private String email;
     private String image;
     private String Nom;
+    private String Prenom;
     private String password;
     @Enumerated(EnumType.STRING)
     private RoleUser roleUser;

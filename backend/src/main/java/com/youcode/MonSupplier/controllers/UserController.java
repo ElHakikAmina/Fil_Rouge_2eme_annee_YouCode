@@ -3,6 +3,7 @@ package com.youcode.MonSupplier.controllers;
 import com.youcode.MonSupplier.exceptions.ApiRequestException;
 import com.youcode.MonSupplier.models.Dtos.UserDto.UserDto;
 import com.youcode.MonSupplier.models.Dtos.ValidationDto.ValidationDto;
+import com.youcode.MonSupplier.models.Enums.RoleUser;
 import com.youcode.MonSupplier.services.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,9 +28,9 @@ public class UserController {
             throw new ApiRequestException("User not found");
         return userService.Login(userDto);
     }
-    @PostMapping("signUp")
-    public Boolean signUp(@RequestBody Object userObject) {
-        return userService.signUp(userObject);
+    @PostMapping("signUp/{roleUser}")
+    public Boolean signUp(@RequestBody Object userObject, @PathVariable RoleUser roleUser) {
+        return userService.signUp(userObject,roleUser);
     }
     @PutMapping("activateAccount")
     public Boolean activateAccount(@RequestBody ValidationDto validationDto) {

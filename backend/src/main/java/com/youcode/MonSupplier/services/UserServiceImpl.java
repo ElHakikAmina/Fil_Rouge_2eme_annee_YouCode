@@ -135,13 +135,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Boolean signUp(Object userObject) {
-        String userObjectString = userObject.toString();
-        String[] userObjectArray = userObjectString.split("roleUser=");
-        RoleUser roleUser = RoleUser.valueOf(userObjectArray[1].substring(0, userObjectArray[1].length() - 1));
-
+    public Boolean signUp(Object userObject,RoleUser roleUser) {
         if (roleUser == RoleUser.Admin) {
             Admin admin = modelMapper.map(userObject, Admin.class);
+            admin.setRoleUser(RoleUser.Admin);
             adminRepository.save(admin);
             UserDto userDto = new UserDto();
             userDto.setEmail(admin.getEmail());
@@ -150,6 +147,8 @@ public class UserServiceImpl implements UserService {
             return true;
         } else if (roleUser == RoleUser.Buyer) {
             Buyer buyer = modelMapper.map(userObject, Buyer.class);
+            buyer.setRoleUser(RoleUser.Buyer);
+            buyer.setIsVerifie(false);
             buyerRepository.save(buyer);
             UserDto userDto = new UserDto();
             userDto.setEmail(buyer.getEmail());
@@ -158,6 +157,8 @@ public class UserServiceImpl implements UserService {
             return true;
         } else if (roleUser == RoleUser.Supplier) {
             Supplier supplier = modelMapper.map(userObject, Supplier.class);
+            supplier.setRoleUser(RoleUser.Supplier);
+            supplier.setIsVerifie(false);
             supplierRepository.save(supplier);
             UserDto userDto = new UserDto();
             userDto.setEmail(supplier.getEmail());
