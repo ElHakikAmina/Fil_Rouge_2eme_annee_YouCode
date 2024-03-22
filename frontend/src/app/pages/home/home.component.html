@@ -1,5 +1,487 @@
 <app-navbar></app-navbar>
-<app-carousel-home></app-carousel-home>
+
+
+<section class="w-full">
+    <div class="w-full h-[900px] bg-[url('https://www.apsia.eu/cloudhouse/wp-content/uploads/2022/08/shutterstock_1788621542.jpg')] bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center ">
+    <!-- Photo by '@insolitus' on Unsplash -->
+        <div>
+            <h1 class="text-white text-center xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl xs:text-xl font-semibold bg-gray-800 p-2 bg-opacity-40 rounded-sm">Découvrez votre futur fournisseur</h1>
+        </div>
+        <div class="w-full mx-auto">
+            <form>
+                <div class="xl:w-1/2 lg:w-[60%] md:w-[70%] sm:w-[70%] xs:w-[90%] mx-auto flex gap-2 md:mt-6 xs:mt-4 mx-4">
+                    <input type="text" class="border border-gray-400 w-full p-2 rounded-md text-xl pl-2"
+                            placeholder="" />
+                    <button type="submit" class="px-[10px] p-[10px] bg-purple-700 text-lg text-white rounded-md font-semibold">Recherche</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4 class="font-display font-bold text-3xl md:text-4xl lg:text-5xl  text-center pt-20">
+    Catégorie plus visité
+</h4>
+
+<section class="container mx-auto p-10 md:py-12 px-0 md:p-8 md:px-0">
+    <section
+        class="p-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 items-start ">
+        <section class="p-5 py-10 bg-purple-50 text-center transform duration-500 hover:-translate-y-2 cursor-pointer">
+            <img src="https://www.dropbox.com/s/mlor33hzk73rh0c/x14423.png?dl=1" alt="">
+            <h1 class="text-3xl my-5">Soft Plushy Cushion Chair</h1>
+               </section>
+
+        <section class="p-5 py-10 bg-green-50 text-center transform duration-500 hover:-translate-y-2 cursor-pointer">
+            <img src="https://www.dropbox.com/s/8ymeus1n9k9bhpd/y16625.png?dl=1" alt="">
+            <h1 class="text-3xl my-5">Comfortable Wooden Chair</h1>
+            </section>
+
+
+        <section class="p-5 py-10 bg-red-50 text-center transform duration-500 hover:-translate-y-2 cursor-pointer">
+            <img src="https://www.dropbox.com/s/ykdro56f2qltxys/hh2774663-87776.png?dl=1" alt="">
+            <h1 class="text-3xl my-5">Multipurpose Wooden Trolly</h1>
+              </section>
+
+        <section class="p-5 py-10 bg-blue-50 text-center transform duration-500 hover:-translate-y-2 cursor-pointer">
+            <img src="https://www.dropbox.com/s/1fav310i2eqkdz8/tool2.png?dl=1" alt="">
+            <h1 class="text-3xl my-5">Multipurpose Wooden Tool</h1>
+               </section>
+    </section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="max-w-xl mx-auto text-center py-24 md:py-32">
+    <div class="w-24 h-2 bg-purple-700 mb-4 mx-auto">
+
+    </div>
+    <h2 class="font-display font-bold text-3xl md:text-4xl lg:text-5xl mb-6">
+        Votre Fournisseur adapté
+    </h2>
+        <p class="font-light text-gray-600 mb-6 leading-relaxed">
+            Découvrez notre vaste gamme de produits de qualité et trouvez celui qui répond parfaitement à vos besoins.        </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="text-center p-10">
+    <h1 class="font-bold text-4xl mb-4">Responsive Product card grid</h1>
+    <h1 class="text-3xl">Tailwind CSS</h1>
+</div>
+
+<!-- ✅ Grid Section - Starts Here 👇 -->
+<section id="Projects"
+    class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
+
+    <!--   ✅ Product card 1 - Starts Here 👇 -->
+    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+        <a href="#">
+            <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+            <div class="px-4 py-3 w-72">
+                <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                <div class="flex items-center">
+                    <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                    <del>
+                        <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                    </del>
+                    <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                            <path
+                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                        </svg></div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--   🛑 Product card 1 - Ends Here  -->
+
+    <!--   ✅ Product card 2 - Starts Here 👇 -->
+    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+        <a href="#">
+            <img src="https://images.unsplash.com/photo-1651950519238-15835722f8bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+            <div class="px-4 py-3 w-72">
+                <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                <div class="flex items-center">
+                    <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                    <del>
+                        <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                    </del>
+                    <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                            <path
+                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                        </svg></div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--   🛑 Product card 2- Ends Here  -->
+
+    <!--   ✅ Product card 3 - Starts Here 👇 -->
+    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+        <a href="#">
+            <img src="https://images.unsplash.com/photo-1651950537598-373e4358d320?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MjV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+            <div class="px-4 py-3 w-72">
+                <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                <div class="flex items-center">
+                    <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                    <del>
+                        <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                    </del>
+                    <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                            <path
+                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                        </svg></div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--   🛑 Product card 3 - Ends Here  -->
+
+    <!--   ✅ Product card 4 - Starts Here 👇 -->
+    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+        <a href="#">
+            <img src="https://images.unsplash.com/photo-1651950540805-b7c71869e689?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+            <div class="px-4 py-3 w-72">
+                <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                <div class="flex items-center">
+                    <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                    <del>
+                        <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                    </del>
+                    <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                            <path
+                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                        </svg></div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--   🛑 Product card 4 - Ends Here  -->
+
+    <!--   ✅ Product card 5 - Starts Here 👇 -->
+    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+        <a href="#">
+            <img src="https://images.unsplash.com/photo-1649261191624-ca9f79ca3fc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+            <div class="px-4 py-3 w-72">
+                <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                <div class="flex items-center">
+                    <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                    <del>
+                        <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                    </del>
+                    <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                            <path
+                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                        </svg></div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--   🛑 Product card 5 - Ends Here  -->
+
+    <!--   ✅ Product card 6 - Starts Here 👇 -->
+    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+        <a href="#">
+            <img src="https://images.unsplash.com/photo-1649261191606-cb2496e97eee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+            <div class="px-4 py-3 w-72">
+                <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+                <div class="flex items-center">
+                    <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
+                    <del>
+                        <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                    </del>
+                    <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                            <path
+                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                        </svg></div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--   🛑 Product card 6 - Ends Here  -->
+
+</section>
+
+
+
+
+<!-- Support Me 🙏🥰 -->
+<script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+<script>
+    kofiWidgetOverlay.draw('mohamedghulam', {
+            'type': 'floating-chat',
+            'floating-chat.donateButton.text': 'Support me',
+            'floating-chat.donateButton.background-color': '#323842',
+            'floating-chat.donateButton.text-color': '#fff'
+        });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main class="dark:bg-gray-800 bg-white relative overflow-hidden w-full h-screen">
+    <header class="h-24 sm:h-32 flex items-center z-30 w-full">
+        <!-- <div class="container mx-auto px-6 flex items-center justify-between">
+            <div class="uppercase text-gray-800 dark:text-white font-black text-3xl">
+                Watch.ME
+            </div>
+            <div class="flex items-center">
+                <nav class="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
+                    <a href="#" class="py-2 px-6 flex">
+                        Home
+                    </a>
+                    <a href="#" class="py-2 px-6 flex">
+                        Watch
+                    </a>
+                    <a href="#" class="py-2 px-6 flex">
+                        Product
+                    </a>
+                    <a href="#" class="py-2 px-6 flex">
+                        Contact
+                    </a>
+                    <a href="#" class="py-2 px-6 flex">
+                        Carrer
+                    </a>
+                </nav>
+                <button class="lg:hidden flex flex-col ml-4">
+                    <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
+                    </span>
+                    <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
+                    </span>
+                    <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
+                    </span>
+                </button>
+            </div>
+        </div> -->
+    </header>
+    <div class="bg-white dark:bg-gray-800 flex relative z-20 items-center overflow-hidden">
+        <div class="container mx-auto px-6 flex relative py-16">
+            <div class="sm:w-2/3 lg:w-2/5 flex flex-col relative z-20">
+                <span class="w-20 h-2 bg-gray-800 dark:bg-white mb-12">
+                </span>
+                <h1 class="font-bebas-neue uppercase text-6xl sm:text-8xl font-black flex flex-col leading-none dark:text-white text-gray-800">
+                    Be on
+                    <span class="text-5xl sm:text-7xl">
+                        Time
+                    </span>
+                </h1>
+                <p class="text-sm sm:text-base text-gray-700 dark:text-white">
+                    Dimension of reality that makes change possible and understandable. An indefinite and homogeneous environment in which natural events and human existence take place.
+                </p>
+                <div class="flex mt-8">
+                    <a href="#" class="uppercase py-2 px-4 rounded-lg bg-pink-500 border-2 border-transparent text-white text-md mr-4 hover:bg-pink-400">
+                        Get started
+                    </a>
+                    <a href="#" class="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-pink-500 text-pink-500 dark:text-white hover:bg-pink-500 hover:text-white text-md">
+                        Read more
+                    </a>
+                </div>
+            </div>
+            <div class="hidden sm:block sm:w-1/3 lg:w-3/5 relative">
+                <img src="https://www.tailwind-kit.com/images/object/10.png" class="max-w-xs md:max-w-sm m-auto"/>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg-white dark:bg-gray-800 h-screen h-full py-6 sm:py-8 lg:py-12">
+    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+       
+
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+            <!-- image - start -->
+            <a href="#"
+                class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+                <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                <div
+                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                </div>
+
+                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">VR</span>
+            </a>
+            <!-- image - end -->
+
+            <!-- image - start -->
+            <a href="#"
+                class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+                <img src="https://images.unsplash.com/photo-1542759564-7ccbb6ac450a?auto=format&q=75&fit=crop&w=1000" loading="lazy" alt="Photo by Magicle" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                <div
+                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                </div>
+
+                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Tech</span>
+            </a>
+            <!-- image - end -->
+
+            <!-- image - start -->
+            <a href="#"
+                class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+                <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=1000" loading="lazy" alt="Photo by Martin Sanchez" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                <div
+                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                </div>
+
+                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Dev</span>
+            </a>
+            <!-- image - end -->
+
+            <!-- image - start -->
+            <a href="#"
+                class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Lorenzo Herrera" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                <div
+                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                </div>
+
+                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Retro</span>
+            </a>
+            <!-- image - end -->
+        </div>
+    </div>
+</div>
 <div class="flex flex-wrap">
     <div class="w-80 bg-white shadow rounded" *ngFor="let product of products">
         <div class="h-48 w-full bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center"
@@ -45,4 +527,218 @@
     </div>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img src="https://corporate.homedepot.com/sites/default/files/styles/hero300x935/public/2022-09/SupplierDiversity_mainpage_3000x935.png?itok=kBFBIEf1" class="w-full  object-cover">
+
+
+
+
+
+
+
+<div class="grid grid-cols-1 md:grid-cols-2"><div class="bg-white p-12 md:p-24 flex justify-start items-center"><a href="/blog/my-third-big-post/"><img src="https://images.unsplash.com/photo-1521145239174-279dc2227166?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80" class="w-full max-w-md"></a></div><div class="md:order-first bg-gray-100 p-12 md:p-24 flex justify-end items-center"><div class="max-w-md"><div class="w-24 h-2 bg-yellow-800 mb-4"></div><h2 class="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-6">This is my second post</h2><p class="font-light text-gray-600 text-sm md:text-base mb-6 leading-relaxed">Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p><a href="/blog/my-third-big-post/" class="inline-block border-2 border-yellow-800 font-light text-yellow-800 text-sm uppercase tracking-widest py-3 px-8 hover:bg-yellow-800 hover:text-white">Read more</a></div></div></div>
+
+
+
+
+
+
+
+
+<section class="bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-24 lg:px-6">
+        <figure class="max-w-screen-md mx-auto">
+            <svg class="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"></path>
+            </svg> 
+            <blockquote>
+                <p class="text-xl font-medium text-gray-900 md:text-2xl dark:text-white">"En tant que propriétaire d'une petite entreprise, j'ai toujours eu du mal à trouver des fournisseurs fiables pour mes produits. Cependant, grâce à MonSupplier, j'ai pu trouver exactement ce que je cherchais en un rien de temps ! Leur plateforme conviviale m'a permis de parcourir une grande variété de fournisseurs et de comparer facilement leurs produits et leurs prix. De plus, le processus de recherche était tellement simple et efficace que j'ai pu trouver un fournisseur de confiance en quelques clics seulement. Mon expérience avec MonSupplier a été fantastique et je recommande vivement ce site à tous ceux qui recherchent des fournisseurs de qualité pour leur entreprise"</p>
+            </blockquote>
+            <figcaption class="flex items-center justify-center mt-6 space-x-3">
+                <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture">
+                <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
+                    <div class="pr-3 font-medium text-gray-900 dark:text-white">Marouan Bouchatoy</div>
+                    <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">CEO at VigieNet</div>
+                </div>
+            </figcaption>
+        </figure>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="relative w-full py-12 px-12">
+    <div class="relative z-10 text-center py-12 md:py-24">
+        <h1 class="text-purple-500 text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-6">Votre Supplier existe ici</h1>
+        <p class="text-purple-700 mb-10 text-base md:text-lg font-bold">Trouvez les produits et les fournisseurs dont vous avez besoin.</p>
+        <a href="/pages/about-us" class="inline-block bg-purple-900  text-white uppercase text-sm tracking-widest font-heading px-8 py-4">Découvrir</a>
+    </div>
+    
+    <img src="https://www.nist.gov/sites/default/files/styles/960_x_960_limit/public/images/2020/10/29/supplier-scouting-blogFeaturedImage-763-2.png?itok=dmqyCx3J" class="w-full h-full absolute inset-0 object-cover">
+</div>
+
 <app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,7 +9,6 @@ import { ProductComponent } from './pages/product/product.component';
 import { SearchComponent } from './pages/search/search.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppLayoutComponent } from './app-layout/app-layout.component';
-import { CarouselHomeComponent } from './components/carousel-home/carousel-home.component';
 import { ContactusComponent } from './pages/contactus/contactus.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FormsModule } from '@angular/forms';
@@ -32,7 +31,6 @@ import { DashboardbuyerComponent } from './pages/dashboardbuyer/dashboardbuyer.c
     SearchComponent,
     NavbarComponent,
     AppLayoutComponent,
-    CarouselHomeComponent,
     ContactusComponent,
     HomeComponent,
     FooterComponent,
