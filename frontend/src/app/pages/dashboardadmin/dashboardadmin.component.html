@@ -4,4 +4,22 @@
     <ul>
       <li *ngFor="let supplier of suppliers">{{ supplier.nom }} - {{ supplier.email }}</li>
     </ul>
-  </div>
+</div>
+
+
+
+
+
+<h2>Buyers</h2>
+<ul>
+  <li *ngFor="let buyer of buyers">
+    {{ buyer.name }} - {{ buyer.email }}
+  </li>
+</ul>
+
+
+
+<h2>Categories</h2>
+<ul>
+  <li *ngFor="let category of categories">{{ category.name }}</li>
+</ul>
