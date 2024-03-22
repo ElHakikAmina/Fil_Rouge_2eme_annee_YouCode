@@ -8,7 +8,7 @@ import { SearchComponent } from './pages/search/search.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { CreateproductComponent } from './pages/createproduct/createproduct.component';
 import { CreatecategoryComponent } from './pages/createcategory/createcategory.component';
-import { DashboardadminComponent } from './pages/dashboardadmin/dashboardadmin.component';
+import { DashboardAdminComponent } from './pages/dashboardadmin/dashboardadmin.component';
 import { DashboardsupplierComponent } from './pages/dashboardsupplier/dashboardsupplier.component';
 import { DashboardbuyerComponent } from './pages/dashboardbuyer/dashboardbuyer.component';
 
@@ -21,7 +21,7 @@ const routes: Routes = [
   {path: 'signup' , component:SignupComponent},
   {path: 'createproduct' , component:CreateproductComponent},
   {path: 'createcategory' , component:CreatecategoryComponent},
-  {path:'dashboardadmin' , component:DashboardadminComponent},
+  {path:'dashboardadmin' , component:DashboardAdminComponent},
   {path: 'dashboardsupplier' , component:DashboardsupplierComponent},
   {path: 'dashboardbuyer', component:DashboardbuyerComponent}
 ];

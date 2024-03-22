@@ -1,1 +1,7 @@
 <p>dashboardadmin works!</p>
+<div>
+    <h2>List of Suppliers</h2>
+    <ul>
+      <li *ngFor="let supplier of suppliers">{{ supplier.nom }} - {{ supplier.email }}</li>
+    </ul>
+  </div>

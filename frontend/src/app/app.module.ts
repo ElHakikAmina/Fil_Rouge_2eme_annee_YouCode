@@ -20,7 +20,7 @@ import { CreateproductComponent } from './pages/createproduct/createproduct.comp
 import { CreatecategoryComponent } from './pages/createcategory/createcategory.component';
 import { CreatecommentComponent } from './components/createcomment/createcomment.component';
 import { ShowcommentsComponent } from './components/showcomments/showcomments.component';
-import { DashboardadminComponent } from './pages/dashboardadmin/dashboardadmin.component';
+import { DashboardAdminComponent } from './pages/dashboardadmin/dashboardadmin.component';
 import { DashboardsupplierComponent } from './pages/dashboardsupplier/dashboardsupplier.component';
 import { DashboardbuyerComponent } from './pages/dashboardbuyer/dashboardbuyer.component';
 
@@ -40,7 +40,7 @@ import { DashboardbuyerComponent } from './pages/dashboardbuyer/dashboardbuyer.c
     CreatecategoryComponent,
     CreatecommentComponent,
     ShowcommentsComponent,
-    DashboardadminComponent,
+    DashboardAdminComponent,
     DashboardsupplierComponent,
     DashboardbuyerComponent
   ],
