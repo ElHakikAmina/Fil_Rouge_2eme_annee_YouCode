@@ -1,4 +1,44 @@
- <!-- component -->
+<div class="flex justify-between items-center bg-purple-500 text-white p-2">
+    <div class="mx-auto">Notre support est disponible 24/7</div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- component -->
  <nav class=" bg-white w-full flex relative justify-between items-center mx-auto px-8 h-20">
     <!-- logo -->
     <div class="inline-flex">
@@ -53,8 +93,71 @@
     </div>
     <!-- end search bar -->
   
+
+
+
+
+
+
+
+
+
+
+
+
+     <!-- login -->
+ <div class="flex-initial">
+    <div class="flex justify-end items-center relative">
+        <!-- Check if user is authenticated and has a role -->
+        <div *ngIf="isLoggedIn()">
+            <!-- Check role and display appropriate elements -->
+            <ng-container *ngIf="isAdmin() || isSupplier()">
+                <!-- Show dashboard link for admin and supplier -->
+                <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" href="/dashboard">Dashboard</a>
+            </ng-container>
+            <ng-container *ngIf="isBuyer()">
+                <!-- Show panier link for buyer -->
+                <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" href="/panier">Panier</a>
+            </ng-container>
+        </div>
+        <!-- If user is not authenticated, show login and registration options -->
+        <div *ngIf="!isLoggedIn()">
+            <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" href="#">Connexion</a>
+            <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" href="#">Créer un compte</a>
+            <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" href="#">Devenir fournisseur</a>
+        </div>
+    </div>
+</div>
+<!-- end login -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- login -->
-    <div class="flex-initial">
+    <!-- <div class="flex-initial">
       <div class="flex justify-end items-center relative">
        
         <div class="flex mr-4 items-center">
@@ -108,7 +211,7 @@
             </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- end login -->
   </nav>
   
