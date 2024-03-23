@@ -11,6 +11,8 @@ import { CreatecategoryComponent } from './pages/createcategory/createcategory.c
 import { DashboardAdminComponent } from './pages/dashboardadmin/dashboardadmin.component';
 import { DashboardsupplierComponent } from './pages/dashboardsupplier/dashboardsupplier.component';
 import { DashboardbuyerComponent } from './pages/dashboardbuyer/dashboardbuyer.component';
+import { ValidateEmailComponent } from './pages/validate-email/validate-email.component';
+import { ValidationsentComponent } from './pages/validationsent/validationsent.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -23,7 +25,9 @@ const routes: Routes = [
   {path: 'createcategory' , component:CreatecategoryComponent},
   {path:'dashboardadmin' , component:DashboardAdminComponent},
   {path: 'dashboardsupplier' , component:DashboardsupplierComponent},
-  {path: 'dashboardbuyer', component:DashboardbuyerComponent}
+  {path: 'dashboardbuyer', component:DashboardbuyerComponent},
+  {path: 'validateemail', component:ValidateEmailComponent},
+  {path: 'validationsent', component:ValidationsentComponent}
 ];
 
 @NgModule({

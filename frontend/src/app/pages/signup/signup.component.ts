@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../Services/User/user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; 
 import { RoleUser } from 'src/app/models/role-user.enum';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { RoleUser } from 'src/app/models/role-user.enum';
 })
 export class SignupComponent{
   
-  constructor(private fb: FormBuilder, private userService: UserService) {}
+  constructor(private router: Router,private fb: FormBuilder, private userService: UserService) {}
 
   roleUser : RoleUser = RoleUser.Default
 
@@ -33,11 +34,12 @@ selectRole() {
   saveUser(user: any) {
     this.userService.signUp(user,this.roleUser).subscribe(
       response => {
-        console.log('Product created successfully:', response);
+        console.log('User created successfully:', response);
         // Handle success, e.g., show a success message
+        this.router.navigateByUrl('/validationsent');
       },
       error => {
-        console.error('Error creating product:', error);
+        console.error('Error creating User:', error);
         // Handle error, e.g., show an error message
       }
     );

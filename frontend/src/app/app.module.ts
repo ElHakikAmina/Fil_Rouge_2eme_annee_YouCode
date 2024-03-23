@@ -24,6 +24,7 @@ import { DashboardAdminComponent } from './pages/dashboardadmin/dashboardadmin.c
 import { DashboardsupplierComponent } from './pages/dashboardsupplier/dashboardsupplier.component';
 import { DashboardbuyerComponent } from './pages/dashboardbuyer/dashboardbuyer.component';
 import { ValidateEmailComponent } from './pages/validate-email/validate-email.component';
+import { ValidationsentComponent } from './pages/validationsent/validationsent.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ValidateEmailComponent } from './pages/validate-email/validate-email.co
     DashboardAdminComponent,
     DashboardsupplierComponent,
     DashboardbuyerComponent,
-    ValidateEmailComponent
+    ValidateEmailComponent,
+    ValidationsentComponent
   ],
   imports: [
     BrowserModule,
