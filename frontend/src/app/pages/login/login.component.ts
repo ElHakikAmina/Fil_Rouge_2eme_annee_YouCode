@@ -24,7 +24,8 @@ export class LoginComponent implements OnInit {
         next: data => {
           const roleUser = data.roleUser
           console.log(roleUser);
-
+          localStorage.setItem('roleUser', roleUser);
+          localStorage.setItem('idUser', data.id);
 
           let dashboardRoute = '/'; // Default route for unknown roles
                      if (roleUser === 'Admin') {
@@ -34,7 +35,6 @@ export class LoginComponent implements OnInit {
                      } else if (roleUser === 'Buyer') {
                        dashboardRoute = '/dashboardbuyer';
                      }
-
 
                      this.router.navigate([dashboardRoute]);
           

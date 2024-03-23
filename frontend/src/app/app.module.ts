@@ -23,6 +23,7 @@ import { ShowcommentsComponent } from './components/showcomments/showcomments.co
 import { DashboardAdminComponent } from './pages/dashboardadmin/dashboardadmin.component';
 import { DashboardsupplierComponent } from './pages/dashboardsupplier/dashboardsupplier.component';
 import { DashboardbuyerComponent } from './pages/dashboardbuyer/dashboardbuyer.component';
+import { ValidateEmailComponent } from './pages/validate-email/validate-email.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { DashboardbuyerComponent } from './pages/dashboardbuyer/dashboardbuyer.c
     ShowcommentsComponent,
     DashboardAdminComponent,
     DashboardsupplierComponent,
-    DashboardbuyerComponent
+    DashboardbuyerComponent,
+    ValidateEmailComponent
   ],
   imports: [
     BrowserModule,
