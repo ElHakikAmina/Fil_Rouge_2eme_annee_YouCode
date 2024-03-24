@@ -58,7 +58,7 @@
     <!-- end logo -->
   
     <!-- search bar -->
-    <div class="hidden sm:block flex-shrink flex-grow-0 justify-start px-2">
+    <!-- <div class="hidden sm:block flex-shrink flex-grow-0 justify-start px-2">
         <div class="inline-block">
             <div class="inline-flex items-center max-w-full">
                 <button class="flex items-center flex-grow-0 flex-shrink pl-2 relative w-60 border rounded-full px-1  py-1" type="button">
@@ -90,7 +90,7 @@
                 </button>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- end search bar -->
   
 
@@ -122,9 +122,9 @@
         </div>
         <!-- If user is not authenticated, show login and registration options -->
         <div *ngIf="!isLoggedIn()">
-            <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" href="#">Connexion</a>
-            <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" href="#">Créer un compte</a>
-            <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" href="#">Devenir fournisseur</a>
+            <a routerLink="/login" class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" >Connexion</a>
+            <a routerLink="/signup" class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" >Créer un compte</a>
+            <a routerLink="/signup" class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" >Devenir fournisseur</a>
         </div>
     </div>
 </div>

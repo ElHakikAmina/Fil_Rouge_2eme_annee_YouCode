@@ -17,9 +17,9 @@
             <form (submit)="searchProducts()">
                 <div class="xl:w-1/2 lg:w-[60%] md:w-[70%] sm:w-[70%] xs:w-[90%] mx-auto flex gap-2 md:mt-6 xs:mt-4 mx-4">
                     <input type="text" class="border border-gray-400 w-full p-2 rounded-md text-xl pl-2"
-                            placeholder="Search" name="searchQuery" [(ngModel)]="searchQuery" />
+                            placeholder="Chercher un produit" name="searchQuery" [(ngModel)]="searchQuery" />
                     <!-- Setting the name attribute to "searchQuery" -->
-                    <button type="submit" class="px-[10px] p-[10px] bg-purple-700 text-lg text-white rounded-md font-semibold">Search</button>
+                    <button type="submit" class="px-[10px] p-[10px] bg-purple-700 text-lg text-white rounded-md font-semibold">Recherche</button>
                 </div>
             </form>
         </div>
@@ -42,7 +42,7 @@
 
 
 
-<h4 class="font-display font-bold text-3xl md:text-4xl lg:text-5xl  text-center pt-20">
+<h4 class="font-display font-bold text-purple-700 text-3xl md:text-4xl lg:text-5xl  text-center pt-20">
     Catégorie plus visité
 </h4>
 
@@ -50,24 +50,24 @@
     <section
         class="p-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 items-start ">
         <section class="p-5 py-10 bg-purple-50 text-center transform duration-500 hover:-translate-y-2 cursor-pointer">
-            <img src="https://www.dropbox.com/s/mlor33hzk73rh0c/x14423.png?dl=1" alt="">
-            <h1 class="text-3xl my-5">Soft Plushy Cushion Chair</h1>
+            <img src="../../../assets/img/jouet.png" alt="">
+            <h1 class="text-3xl my-5">Jouets et jeux</h1>
                </section>
 
         <section class="p-5 py-10 bg-green-50 text-center transform duration-500 hover:-translate-y-2 cursor-pointer">
-            <img src="https://www.dropbox.com/s/8ymeus1n9k9bhpd/y16625.png?dl=1" alt="">
-            <h1 class="text-3xl my-5">Comfortable Wooden Chair</h1>
+            <img src="../../../assets/img/sport.png" alt="">
+            <h1 class="text-3xl my-5">Sports</h1>
             </section>
 
 
         <section class="p-5 py-10 bg-red-50 text-center transform duration-500 hover:-translate-y-2 cursor-pointer">
-            <img src="https://www.dropbox.com/s/ykdro56f2qltxys/hh2774663-87776.png?dl=1" alt="">
-            <h1 class="text-3xl my-5">Multipurpose Wooden Trolly</h1>
+            <img src="../../../assets/img/shoes.png" alt="">
+            <h1 class="text-3xl my-5">Mode</h1>
               </section>
 
         <section class="p-5 py-10 bg-blue-50 text-center transform duration-500 hover:-translate-y-2 cursor-pointer">
-            <img src="https://www.dropbox.com/s/1fav310i2eqkdz8/tool2.png?dl=1" alt="">
-            <h1 class="text-3xl my-5">Multipurpose Wooden Tool</h1>
+            <img src="../../../assets/img/pc.png" alt="">
+            <h1 class="text-3xl my-5">Electroniques</h1>
                </section>
     </section>
 </section>
@@ -77,7 +77,36 @@
 
 
 
+<!-- ✅ les produits👇 -->
+<section id="Projects"
+    class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
 
+
+    <div *ngFor="let product of products" class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+        <a href="/product/{{product.id}}">
+            <img src='./assets/img/{{product.image}}'
+                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+            <div class="px-4 py-3 w-72">
+                <span class="text-gray-400 mr-3 uppercase text-xs"> {{product.category.name}}</span>
+                <p class="text-lg font-bold text-black truncate block capitalize">{{product.name}}</p>
+                <div class="flex items-center">
+                    <p class="text-lg font-semibold text-black cursor-auto my-3">${{product.prix}}DH</p>
+                    <del>
+                        <p class="text-sm text-gray-600 cursor-auto ml-2">${{product.prix +70}}  DH</p>
+                    </del>
+                    <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                            <path
+                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                        </svg></div>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+</section>
 
 
 
@@ -110,178 +139,78 @@
 
 
 
-<div class="text-center p-10">
-    <h1 class="font-bold text-4xl mb-4">Responsive Product card grid</h1>
-    <h1 class="text-3xl">Tailwind CSS</h1>
+
+
+
+
+
+<div class="flex flex-wrap">
+    <div class="w-80 bg-white shadow rounded" *ngFor="let product of products">
+        <div class="h-48 w-full bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center"
+            style="background-image: url('./assets/img/{{product.image}}')">
+        </div>
+        <div class="p-4 flex flex-col items-center">
+            <p class="text-gray-400 font-light text-xs text-center">
+                {{product.category.name}}
+            </p>
+            <h1 class="text-gray-800 text-center mt-1">{{product.name}}</h1>
+            <p class="text-center text-gray-800 mt-1">{{product.prix}}DH</p>
+            <div class="inline-flex items-center mt-2">
+                <button
+                    class="bg-white rounded-l border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-4" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+                    </svg>
+                </button>
+                <div
+                    class="bg-gray-100 border-t border-b border-gray-100 text-gray-600 hover:bg-gray-100 inline-flex items-center px-4 py-1 select-none">
+                    2
+                </div>
+                <button
+                    class="bg-white rounded-r border text-gray-600 hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50 inline-flex items-center px-2 py-1 border-r border-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-4" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                </button>
+            </div>
+
+            <button
+                class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50 mt-4 w-full flex items-center justify-center">
+                Add to order
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+            </button>
+        </div>
+    </div>
 </div>
 
-<!-- ✅ Grid Section - Starts Here 👇 -->
-<section id="Projects"
-    class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
 
-    <!--   ✅ Product card 1 - Starts Here 👇 -->
-    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-        <a href="#">
-            <img src="https://images.unsplash.com/photo-1646753522408-077ef9839300?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-            <div class="px-4 py-3 w-72">
-                <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
-                <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
-                <div class="flex items-center">
-                    <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
-                    <del>
-                        <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
-                    </del>
-                    <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
-                            <path
-                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                        </svg></div>
-                </div>
-            </div>
-        </a>
-    </div>
-    <!--   🛑 Product card 1 - Ends Here  -->
 
-    <!--   ✅ Product card 2 - Starts Here 👇 -->
-    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-        <a href="#">
-            <img src="https://images.unsplash.com/photo-1651950519238-15835722f8bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-            <div class="px-4 py-3 w-72">
-                <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
-                <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
-                <div class="flex items-center">
-                    <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
-                    <del>
-                        <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
-                    </del>
-                    <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
-                            <path
-                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                        </svg></div>
-                </div>
-            </div>
-        </a>
-    </div>
-    <!--   🛑 Product card 2- Ends Here  -->
 
-    <!--   ✅ Product card 3 - Starts Here 👇 -->
-    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-        <a href="#">
-            <img src="https://images.unsplash.com/photo-1651950537598-373e4358d320?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MjV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-            <div class="px-4 py-3 w-72">
-                <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
-                <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
-                <div class="flex items-center">
-                    <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
-                    <del>
-                        <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
-                    </del>
-                    <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
-                            <path
-                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                        </svg></div>
-                </div>
-            </div>
-        </a>
-    </div>
-    <!--   🛑 Product card 3 - Ends Here  -->
 
-    <!--   ✅ Product card 4 - Starts Here 👇 -->
-    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-        <a href="#">
-            <img src="https://images.unsplash.com/photo-1651950540805-b7c71869e689?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mjl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-            <div class="px-4 py-3 w-72">
-                <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
-                <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
-                <div class="flex items-center">
-                    <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
-                    <del>
-                        <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
-                    </del>
-                    <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
-                            <path
-                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                        </svg></div>
-                </div>
-            </div>
-        </a>
-    </div>
-    <!--   🛑 Product card 4 - Ends Here  -->
 
-    <!--   ✅ Product card 5 - Starts Here 👇 -->
-    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-        <a href="#">
-            <img src="https://images.unsplash.com/photo-1649261191624-ca9f79ca3fc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-            <div class="px-4 py-3 w-72">
-                <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
-                <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
-                <div class="flex items-center">
-                    <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
-                    <del>
-                        <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
-                    </del>
-                    <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
-                            <path
-                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                        </svg></div>
-                </div>
-            </div>
-        </a>
-    </div>
-    <!--   🛑 Product card 5 - Ends Here  -->
 
-    <!--   ✅ Product card 6 - Starts Here 👇 -->
-    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-        <a href="#">
-            <img src="https://images.unsplash.com/photo-1649261191606-cb2496e97eee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
-            <div class="px-4 py-3 w-72">
-                <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
-                <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
-                <div class="flex items-center">
-                    <p class="text-lg font-semibold text-black cursor-auto my-3">$149</p>
-                    <del>
-                        <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
-                    </del>
-                    <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
-                            <path
-                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                        </svg></div>
-                </div>
-            </div>
-        </a>
-    </div>
-    <!--   🛑 Product card 6 - Ends Here  -->
 
-</section>
+
+
+
+
+
+
+
+
+
 
 
 
 
 <!-- Support Me 🙏🥰 -->
-<script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+<!-- <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
 <script>
     kofiWidgetOverlay.draw('mohamedghulam', {
             'type': 'floating-chat',
@@ -289,7 +218,7 @@
             'floating-chat.donateButton.background-color': '#323842',
             'floating-chat.donateButton.text-color': '#fff'
         });
-</script>
+</script> -->
 
 
 
@@ -489,6 +418,7 @@
         </div>
     </div>
 </div>
+
 <div class="flex flex-wrap">
     <div class="w-80 bg-white shadow rounded" *ngFor="let product of products">
         <div class="h-48 w-full bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center"

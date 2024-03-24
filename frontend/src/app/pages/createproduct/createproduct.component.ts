@@ -10,6 +10,8 @@ import { Product } from 'src/app/models/product';
   styleUrls: ['./createproduct.component.css']
 })
 export class CreateproductComponent {
+  
+  
 saveProduct(product: any) {
   this.productService.createProduct(product).subscribe(
     response => {
