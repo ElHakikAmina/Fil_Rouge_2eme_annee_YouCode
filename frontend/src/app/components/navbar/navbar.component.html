@@ -109,7 +109,7 @@
  <div class="flex-initial">
     <div class="flex justify-end items-center relative">
         <!-- Check if user is authenticated and has a role -->
-        <div *ngIf="isLoggedIn()">
+        <div *ngIf=" loggedIn != null">
             <!-- Check role and display appropriate elements -->
             <ng-container *ngIf="isAdmin() || isSupplier()">
                 <!-- Show dashboard link for admin and supplier -->
@@ -119,9 +119,10 @@
                 <!-- Show panier link for buyer -->
                 <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" href="/panier">Panier</a>
             </ng-container>
+            <a *ngIf=" loggedIn != null" (click)="logout()" class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full">Déconnexion</a>
         </div>
         <!-- If user is not authenticated, show login and registration options -->
-        <div *ngIf="!isLoggedIn()">
+        <div *ngIf=" loggedIn == null">
             <a routerLink="/login" class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" >Connexion</a>
             <a routerLink="/signup" class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" >Créer un compte</a>
             <a routerLink="/signup" class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" >Devenir fournisseur</a>

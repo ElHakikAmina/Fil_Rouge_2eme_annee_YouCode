@@ -1,19 +1,47 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit{
 
-  isLoggedIn(): boolean { return localStorage.getItem('userId') !== null; }
 
-  isAdmin(): boolean {  return localStorage.getItem('roleUser') === 'Admin'; }
+ngOnInit(): void {
+    console.log(this.loggedIn);
+}
 
-  isSupplier(): boolean { return localStorage.getItem('roleUser') === 'Supplier'; }
 
-  isBuyer(): boolean { return localStorage.getItem('roleUser') === 'Buyer'; }
+  loggedIn: any= localStorage.getItem("idUser");
+
+ 
+
+  isLoggedIn(): boolean {
+    return localStorage.getItem('userId') !== null && localStorage.getItem('roleUser') !== null;
+  }
+
+  logout(): void {
+    localStorage.removeItem('idUser');
+    localStorage.removeItem('roleUser');
+    window.location.href='';
+  }
+
+  isAdmin(): boolean {  
+    return localStorage.getItem('roleUser') === 'Admin'; 
+  }
+
+  isSupplier(): boolean { 
+    return localStorage.getItem('roleUser') === 'Supplier'; 
+  }
+
+  isBuyer(): boolean { 
+    return localStorage.getItem('roleUser') === 'Buyer'; 
+  }
+
+
+
+
 
 
 }
