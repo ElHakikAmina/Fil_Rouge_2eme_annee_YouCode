@@ -16,6 +16,7 @@ import java.util.List;
 public class ProductController {
     private final ProductService productService;
 
+
     @Autowired
     public ProductController(ProductService productService) {
         this.productService = productService;
@@ -65,4 +66,11 @@ public class ProductController {
     public boolean ajouterAuPanier(@PathVariable Long idBuyer, @PathVariable Long idProduct, @PathVariable int quantity){
         return productService.ajouterAuPanier(idBuyer, idProduct, quantity);
     }
+
+    @GetMapping("/getPanierProductsByBuyerId/{buyerId}")
+    public List<Product> getPanierProductsByBuyerId(@PathVariable Long buyerId) {
+        return productService.getPanierProductsByBuyerId(buyerId);
+    }
+
+
 }

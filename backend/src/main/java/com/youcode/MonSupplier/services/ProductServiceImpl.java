@@ -25,12 +25,19 @@ public class ProductServiceImpl implements ProductService {
     private final BuyerRepository buyerRepository;
     private final ModelMapper modelMapper;
 
+
+
     public ProductServiceImpl(ProductRepository productRepository,PanierRepository panierRepository, AchatProductRepository achatProductRepository, BuyerRepository buyerRepository, ModelMapper modelMapper) {
         this.productRepository = productRepository;
         this.achatProductRepository = achatProductRepository;
         this.panierRepository = panierRepository;
         this.buyerRepository = buyerRepository;
         this.modelMapper = modelMapper;
+    }
+
+    @Override
+    public List<Product> getPanierProductsByBuyerId(Long idBuyer) {
+        return panierRepository.findProductsByBuyerId(idBuyer); // Call the repository method
     }
 
     @Override
@@ -93,7 +100,7 @@ public class ProductServiceImpl implements ProductService {
             Optional<Product> product = productRepository.findById(idProduct);
             Buyer buyer = buyerRepository.findById(idBuyer).get();
             if (product.isPresent()){
-               
+
                 if (product.get().getQuantity() >= quantity && quantity >= product.get().getLess_quantity()){
                     product.get().setQuantity(product.get().getQuantity() - quantity);
                     productRepository.save(product.get());

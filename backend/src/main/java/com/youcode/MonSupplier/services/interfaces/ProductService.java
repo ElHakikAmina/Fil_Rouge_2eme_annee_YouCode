@@ -10,6 +10,7 @@ import java.util.Optional;
 
 public interface ProductService {
     List<Product> getProducts();
+    List<Product> getPanierProductsByBuyerId(Long idBuyer);
 
     Product createProduct(ProductDto ProductDto);
     

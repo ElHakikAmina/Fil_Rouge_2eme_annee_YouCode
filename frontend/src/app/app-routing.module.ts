@@ -13,6 +13,7 @@ import { DashboardsupplierComponent } from './pages/dashboardsupplier/dashboards
 import { DashboardbuyerComponent } from './pages/dashboardbuyer/dashboardbuyer.component';
 import { ValidateEmailComponent } from './pages/validate-email/validate-email.component';
 import { ValidationsentComponent } from './pages/validationsent/validationsent.component';
+import { PanierComponent } from './pages/panier/panier.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -27,7 +28,8 @@ const routes: Routes = [
   {path: 'dashboardsupplier' , component:DashboardsupplierComponent},
   {path: 'dashboardbuyer', component:DashboardbuyerComponent},
   {path: 'validateemail', component:ValidateEmailComponent},
-  {path: 'validationsent', component:ValidationsentComponent}
+  {path: 'validationsent', component:ValidationsentComponent},
+  {path: 'panier' , component:PanierComponent}
 ];
 
 @NgModule({

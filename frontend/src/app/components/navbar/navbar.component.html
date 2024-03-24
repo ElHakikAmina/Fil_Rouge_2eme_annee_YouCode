@@ -111,9 +111,9 @@
         <!-- Check if user is authenticated and has a role -->
         <div *ngIf=" loggedIn != null">
             <!-- Check role and display appropriate elements -->
-            <ng-container *ngIf="isAdmin() || isSupplier()">
+            <ng-container *ngIf="isAdmin() ">
                 <!-- Show dashboard link for admin and supplier -->
-                <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" href="/dashboard">Dashboard</a>
+                <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" href="/dashboardadmin">Dashboard</a>
             </ng-container>
             <ng-container *ngIf="isBuyer()">
                 <!-- Show panier link for buyer -->
