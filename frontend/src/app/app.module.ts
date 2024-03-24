@@ -28,6 +28,7 @@ import { ValidationsentComponent } from './pages/validationsent/validationsent.c
 import { PanierComponent } from './pages/panier/panier.component';
 import { PaiementComponent } from './pages/paiement/paiement.component';
 import { NavDashboardAdminComponent } from './components/nav-dashboard-admin/nav-dashboard-admin.component';
+import { UpdateCategoryComponent } from './pages/update-category/update-category.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { NavDashboardAdminComponent } from './components/nav-dashboard-admin/nav
     ValidationsentComponent,
     PanierComponent,
     PaiementComponent,
-    NavDashboardAdminComponent
+    NavDashboardAdminComponent,
+    UpdateCategoryComponent
   ],
   imports: [
     BrowserModule,

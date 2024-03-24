@@ -15,6 +15,7 @@ import { ValidateEmailComponent } from './pages/validate-email/validate-email.co
 import { ValidationsentComponent } from './pages/validationsent/validationsent.component';
 import { PanierComponent } from './pages/panier/panier.component';
 import { PaiementComponent } from './pages/paiement/paiement.component';
+import { UpdateCategoryComponent } from './pages/update-category/update-category.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -31,7 +32,8 @@ const routes: Routes = [
   {path: 'validateemail', component:ValidateEmailComponent},
   {path: 'validationsent', component:ValidationsentComponent},
   {path: 'panier' , component:PanierComponent},
-  {path: 'paiement' , component:PaiementComponent}
+  {path: 'paiement' , component:PaiementComponent},
+  {path: 'update-category/:id', component: UpdateCategoryComponent}
 ];
 
 @NgModule({
