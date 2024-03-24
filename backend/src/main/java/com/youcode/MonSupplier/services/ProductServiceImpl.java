@@ -88,10 +88,12 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Boolean ajouterAuPanier(long idBuyer, long idProduct, int quantity) {
+
         if (productRepository.existsById(idProduct) && buyerRepository.existsById(idBuyer)){
             Optional<Product> product = productRepository.findById(idProduct);
             Buyer buyer = buyerRepository.findById(idBuyer).get();
             if (product.isPresent()){
+               
                 if (product.get().getQuantity() >= quantity && quantity >= product.get().getLess_quantity()){
                     product.get().setQuantity(product.get().getQuantity() - quantity);
                     productRepository.save(product.get());

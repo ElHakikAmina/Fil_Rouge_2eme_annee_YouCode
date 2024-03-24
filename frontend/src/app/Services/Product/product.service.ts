@@ -44,4 +44,9 @@ export class ProductService {
   achatProduct(idBuyer: number, idProduct: number, quantity: number): Observable<boolean> {
     return this.http.post<boolean>(`${this.baseUrl}/achatProduct/${idBuyer}/${idProduct}/${quantity}`, null);
   }
+
+  addToCart(idBuyer: number, idProduct: number, quantity: number): Observable<boolean> {
+    console.log(quantity, idProduct, idBuyer)
+    return this.http.post<boolean>(`${this.baseUrl}/ajouteraupanier/${idBuyer}/${idProduct}/${quantity}`, null);
+  }
 }
