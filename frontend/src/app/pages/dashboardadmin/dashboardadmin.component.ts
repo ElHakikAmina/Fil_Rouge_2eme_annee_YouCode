@@ -12,6 +12,7 @@ import { ProductService } from 'src/app/Services/Product/product.service';
 })
 
 export class DashboardAdminComponent implements OnInit {
+  pageTitle: string = 'Dashboard';
   suppliers: any[] = [];
   buyers: any[] =[];
   categories: Category[] = [];

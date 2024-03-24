@@ -10,9 +10,10 @@ import { Category } from 'src/app/models/category';
   styleUrls: ['./update-category.component.css']
 })
 export class UpdateCategoryComponent implements OnInit {
-  categoryId: number = 0; // Initialize categoryId to a default value
+  pageTitle: string = 'Modifier Categorie';
+  categoryId: number = 0; 
   category: Category = {
-    id: 0, // Change id to a default value or remove it if it's automatically assigned
+    id: 0, 
     name: ''
   };
 

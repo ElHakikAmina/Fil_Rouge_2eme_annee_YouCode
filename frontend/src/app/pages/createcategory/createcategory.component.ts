@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./createcategory.component.css']
 })
 export class CreatecategoryComponent {
-
+  pageTitle: string = 'Ajouter Catégorie';
   constructor(private router : Router, private fb: FormBuilder, private categoryService: CategoryService) { }
 
   saveCategory(category: any) {

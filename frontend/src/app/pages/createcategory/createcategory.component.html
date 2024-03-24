@@ -33,17 +33,17 @@
 
   <div class="p-4 xl:ml-80">
 
-    <app-nav-dashboard-admin2></app-nav-dashboard-admin2>
+    <app-nav-dashboard-admin2 [pageTitle]="pageTitle"></app-nav-dashboard-admin2>
 
 
-    
+
 
 <div class="flex h-screen justify-between bg-white p-8 shadow-lg rounded-lg px-40 items-center justify-center">
 
 
   <form class="flex items-center justify-between">
     <div class="flex items-center space-x-4">
-      <label class="text-gray-700">Name:</label>
+      <label class="text-gray-700">Ajouter une caégorie:</label>
       <input [(ngModel)]="category.name" name="name" type="text" class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500">
     </div>
     
