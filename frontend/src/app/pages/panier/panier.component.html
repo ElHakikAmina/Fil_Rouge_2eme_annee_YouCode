@@ -1,1 +1,8 @@
-<p>panier works!</p>
+<div *ngIf="products">
+    <h2>Products in Panier</h2>
+    <ul>
+      <li *ngFor="let product of products">
+        {{ product.name }} - Price: {{ product.prix }}
+      </li>
+    </ul>
+  </div>
