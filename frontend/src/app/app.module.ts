@@ -26,6 +26,7 @@ import { DashboardbuyerComponent } from './pages/dashboardbuyer/dashboardbuyer.c
 import { ValidateEmailComponent } from './pages/validate-email/validate-email.component';
 import { ValidationsentComponent } from './pages/validationsent/validationsent.component';
 import { PanierComponent } from './pages/panier/panier.component';
+import { PaiementComponent } from './pages/paiement/paiement.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { PanierComponent } from './pages/panier/panier.component';
     DashboardbuyerComponent,
     ValidateEmailComponent,
     ValidationsentComponent,
-    PanierComponent
+    PanierComponent,
+    PaiementComponent
   ],
   imports: [
     BrowserModule,

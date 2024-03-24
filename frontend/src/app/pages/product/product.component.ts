@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/Services/Product/product.service';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../../models/product';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-product',
@@ -13,7 +15,7 @@ export class ProductComponent implements OnInit {
   buyerId: number =0;
   product: Product | null = null; 
 
-  constructor(private productService: ProductService, private route: ActivatedRoute) { }
+  constructor(private router:Router, private productService: ProductService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -58,6 +60,7 @@ export class ProductComponent implements OnInit {
       (response: any) => {
         console.log('Product added to cart successfully:', response);
         // Handle success, e.g., show a success message
+        this.router.navigate(['/panier']);
       },
       (error: any) => {
         console.error('Error adding product to cart:', error);
