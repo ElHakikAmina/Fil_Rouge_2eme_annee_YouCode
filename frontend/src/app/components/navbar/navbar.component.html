@@ -113,11 +113,15 @@
             <!-- Check role and display appropriate elements -->
             <ng-container *ngIf="isAdmin() ">
                 <!-- Show dashboard link for admin and supplier -->
-                <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" href="/dashboardadmin">Dashboard</a>
+                <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" routerLink="/dashboardadmin">Dashboard</a>
             </ng-container>
             <ng-container *ngIf="isBuyer()">
                 <!-- Show panier link for buyer -->
-                <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" href="/panier">Panier</a>
+                <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" routerLink="/panier">Panier</a>
+            </ng-container>
+            <ng-container *ngIf="isSupplier()">
+                <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" routerLink="/dashboardsupplier">Dashboard</a>
+                <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" routerLink="/createproduct">Ajouter produit</a>
             </ng-container>
             <a *ngIf=" loggedIn != null" (click)="logout()" class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full">Déconnexion</a>
         </div>
