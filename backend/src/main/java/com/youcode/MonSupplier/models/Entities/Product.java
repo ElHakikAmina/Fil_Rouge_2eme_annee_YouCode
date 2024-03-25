@@ -18,7 +18,6 @@ public class Product {
     private int quantity;
     private String description;
     private String image;
-
     @ManyToOne
     private Supplier supplier;
 
