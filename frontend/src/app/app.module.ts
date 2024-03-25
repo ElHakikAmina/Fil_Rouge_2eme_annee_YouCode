@@ -30,6 +30,7 @@ import { PaiementComponent } from './pages/paiement/paiement.component';
 import { NavDashboardAdminComponent } from './components/nav-dashboard-admin/nav-dashboard-admin.component';
 import { UpdateCategoryComponent } from './pages/update-category/update-category.component';
 import { NavDashboardAdmin2Component } from './components/nav-dashboard-admin2/nav-dashboard-admin2.component';
+import { NavDashboardAdminCreatecategoryComponent } from './components/nav-dashboard-admin-createcategory/nav-dashboard-admin-createcategory.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { NavDashboardAdmin2Component } from './components/nav-dashboard-admin2/n
     PaiementComponent,
     NavDashboardAdminComponent,
     UpdateCategoryComponent,
-    NavDashboardAdmin2Component
+    NavDashboardAdmin2Component,
+    NavDashboardAdminCreatecategoryComponent
   ],
   imports: [
     BrowserModule,

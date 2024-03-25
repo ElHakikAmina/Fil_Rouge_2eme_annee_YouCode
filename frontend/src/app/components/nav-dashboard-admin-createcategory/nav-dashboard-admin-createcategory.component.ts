@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
-  selector: 'app-nav-dashboard-admin',
-  templateUrl: './nav-dashboard-admin.component.html',
-  styleUrls: ['./nav-dashboard-admin.component.css']
+  selector: 'app-nav-dashboard-admin-createcategory',
+  templateUrl: './nav-dashboard-admin-createcategory.component.html',
+  styleUrls: ['./nav-dashboard-admin-createcategory.component.css']
 })
-export class NavDashboardAdminComponent {
+export class NavDashboardAdminCreatecategoryComponent {
 
   activeButton: string = '';
 
