@@ -1,5 +1,16 @@
-<p>showcomments works!</p>
+<!-- <p>showcomments works!</p>
 <div class="w-80 bg-white shadow rounded" *ngFor="let comment of comments">
     {{comment.buyer.nom}} {{comment.buyer.prenom}}
     {{comment.comment}}
+</div> -->
+
+
+
+
+
+<p class="text-purple-700">Voir les commentaire suivant: </p>
+
+<div class="w-80 bg-white shadow rounded mt-4" *ngFor="let comment of comments">
+    <p class="text-gray-700 font-bold">{{ comment.buyer.nom }} {{ comment.buyer.prenom }}</p>
+    <p class="text-gray-700">{{ comment.comment }}</p>
 </div>

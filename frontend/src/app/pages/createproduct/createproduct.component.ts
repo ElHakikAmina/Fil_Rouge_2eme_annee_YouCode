@@ -4,6 +4,7 @@ import { ProductService } from 'src/app/Services/Product/product.service';
 import { Product } from 'src/app/models/product';
 import { Category } from 'src/app/models/category';
 import { CategoryService } from 'src/app/Services/Category/category.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -32,7 +33,7 @@ export class CreateproductComponent {
   
   categories: Category[] = [];
 
-  constructor(private categoryService: CategoryService , private fb: FormBuilder, private productService: ProductService) {
+  constructor(private router:Router, private categoryService: CategoryService , private fb: FormBuilder, private productService: ProductService) {
   }
 
   ngOnInit(): void {
@@ -70,7 +71,7 @@ saveProduct(product: any) {
     response => {
       console.log('Product created successfully:', response);
       // Handle success, e.g., show a success message
-      //console.log(localStorage.getItem('idUser'))
+      this.router.navigate(['/dashboardsupplier']);
     },
     error => {
       console.error('Error creating product:', error);
