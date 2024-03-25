@@ -1,3 +1,8 @@
+<app-navbar></app-navbar>
+
+
+
+
 <!-- create-product.component.html -->
 
  <form>
@@ -10,11 +15,11 @@
         <input  [(ngModel)] = "product.prix" name="prix" type="number">
       </div>
       <div>
-        <label>Less Quantity:</label>
+        <label>Quantité minimum:</label>
         <input  [(ngModel)] = "product.less_quantity" name="less_quantity" type="number">
       </div>
       <div>
-        <label>Quantity:</label>
+        <label>Quantité:</label>
         <input  [(ngModel)] = "product.quantity" name="quantity" type="number">
       </div>
       <div>
@@ -36,6 +41,154 @@
   
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <div class=" bg-gray-100 flex flex-col justify-center py-12 ">
+    <div class="sm:mx-auto sm:w-full sm:max-w-md">
+        <h2 class=" text-center text-3xl font-extrabold text-gray-900">
+            Ajouter un produit et obtenez des clients
+        </h2>
+        
+    </div>
+  
+    <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+        <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+            <form class="space-y-6" action="#" method="POST">
+             
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">
+                        Nom du produit
+                    </label>
+                    <div class="mt-1">
+                        <input [(ngModel)] = "product.name" id="nom" name="nom"  type="text" autocomplete="nom" required
+                            class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                            placeholder="Entrez Le nom du produit">
+                    </div>
+                </div>
+  
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700">
+                      Prix
+                  </label>
+                  <div class="mt-1">
+                      <input [(ngModel)] = "product.prix" id="prix" name="prix"  type="text" autocomplete="Prix" required
+                          class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                          placeholder="Entrez le prix du produit">
+                  </div>
+              </div>
+  
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">
+                    Quantité minimum
+                </label>
+                <div class="mt-1">
+                    <input [(ngModel)] = "product.less_quantity" id="quantite_minimum" name="quantite_minimum"  type="text" autocomplete="quantite_minimum" required
+                        class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                        placeholder="Entrez la quantité minimum">
+                </div>
+            </div>
+  
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">
+                  Quantité
+              </label>
+              <div class="mt-1">
+                  <input [(ngModel)] = "product.quantity" id="quantite" name="quantité" type="text" autocomplete="quantité" required
+                      class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                      placeholder="Entrez le quantité">
+              </div>
+            </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">
+                    Description
+                </label>
+                <div class="mt-1">
+                  <textarea [(ngModel)] = "product.description" id="description" name="description" type="text" autocomplete="description" required
+                      class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                      placeholder="Entrez une description"></textarea>
+                </div>
+            </div>
+  
+  
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">
+                  Image
+              </label>
+              <div class="mt-1">
+                <input name="image" type="file" [(ngModel)] = "product.image">
+              </div>
+            </div>
+  
+  
+  
+          
+                
+               
+  
+                <div>
+                    <button (click)="saveProduct(product)" type="submit" 
+                        class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-purple-700 hover:bg-purple-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+  
+                        Ajouter produit
+                    </button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <app-footer></app-footer>
 
 
 
