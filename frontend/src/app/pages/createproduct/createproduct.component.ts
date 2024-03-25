@@ -22,7 +22,7 @@ export class CreateproductComponent {
     description: '',
     image: '',
     category:{
-      id:4
+      id:0
     },
     supplier:{
       id:0
@@ -63,7 +63,8 @@ export class CreateproductComponent {
 saveProduct(product: any) {
 
   
-  
+  const selectedCategoryId = parseInt((document.getElementById('category') as HTMLSelectElement).value, 10);
+  this.product.category.id = selectedCategoryId;
 
   this.productService.createProduct(product).subscribe(
     response => {

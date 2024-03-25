@@ -136,7 +136,7 @@
   
             <div>
               <label>Category:</label>
-              <select formControlName="category">
+              <select id="category" [(ngModel)]="product.category.id">
                 <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
               </select>
             </div>
